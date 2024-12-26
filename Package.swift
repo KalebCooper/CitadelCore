@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "CitadelCore",
     platforms: [
-        .macOS(.v12), .iOS(.v15), .tvOS(.v15), .watchOS(.v8)
+        .macOS(.v15), .iOS(.v18), .tvOS(.v18), .watchOS(.v11)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -27,5 +27,6 @@ let package = Package(
         .testTarget(
             name: "CitadelCoreTests",
             dependencies: ["CitadelCore"]),
-    ]
+    ],
+    swiftLanguageModes: [.version("6")]
 )
